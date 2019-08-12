@@ -1,0 +1,1489 @@
+<html>
+<head><h2>Vibration Pattern</h2></head>
+<meta charset="UTF-8">
+ <title>Vibration.html</title>
+<body>
+    <input type="button" value="   Short   " onclick="Pattern_1()">   
+    <input type="button" value="   Cote   " onclick="Pattern_2()">
+    <input type="button" value="   Medium   " onclick="Pattern_3()"><br><br>
+    <input type="button" value="  Random   " onclick="Pattern_4()">
+    <input type="button" value="Incresing" onclick="Pattern_5()">
+    <input type="button" value=" Madness " onclick="Pattern_6()"><br><br>
+    <input type="button" value="Car starting" onclick="Pattern_7()">
+    <input type="button" value="Long and long" onclick="Pattern_8()">
+    <input type="button" value="Long and short" onclick="Pattern_9()"><br><br>
+    <input type="button" value="Power-range" onclick="Pattern_10()">
+    <input type="button" value="Heartbeat" onclick="Pattern_11()">
+    <input type="button" value="Decresing" onclick="Pattern_12()"><br><br>
+    <br> <p>Randomize the above patterns</p>
+    <input type="button" value="Three Randomized the Pattern" onclick="Randomize_3()"><br><br>
+    <input type="button" value="Four Randomized the Pattern" onclick="Randomize_4()"><br><br>
+    <input type="button" value="Five Randomized the Pattern" onclick="Randomize_5()"><br><br>
+    <input type="button" value="Six Randomized the Pattern" onclick="Randomize_6()"><br><br>
+    <input type="button" value="Seven Randomized the Pattern" onclick="Randomize_7()"><br><br>
+    <input type="button" value="Eight Randomized the Pattern" onclick="Randomize_8()"><br><br>
+    <input type="button" value="Nine Randomize the Pattern" onclick="Randomize_9()"><br><br>
+    <input type="button" value="Ten Randomize the Pattern" onclick="Randomize_10()"><br><br>
+    <input type="button" value="Eleven Randomize the Pattern" onclick="Randomize_11()"><br><br>
+    <input type="button" value="Twelve Randomize the Pattern" onclick="Randomize_12()"><br><br>
+<br>
+<br>
+<br>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<ul></ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script> 
+   function Pattern_1()
+   {//short
+   window.navigator.vibrate([300,100,300,100]);
+   }
+   function Pattern_2()
+   {// Cote
+   window.navigator.vibrate([75,75,75,75,75,225,75,75,75,75,75,225]);
+   }
+   function Pattern_3()
+   {//long
+   window.navigator.vibrate([600,300,600,300]);
+   }
+   function Pattern_4()
+   {// random
+   window.navigator.vibrate([125,75,125,275,125,75,125,275,200,600]);
+   }
+   function Pattern_5()
+   {//incresing
+   window.navigator.vibrate([200,100,300,275,425,100,600,100]);
+   }
+   function Pattern_6()
+   {//Madness
+   window.navigator.vibrate([100,80,100,80,100,80,100,80,100,80,320,160,320,160]);
+   } 
+   function Pattern_7()
+   {// car starting
+   window.navigator.vibrate([133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20]);
+   }
+   function Pattern_8()
+   {//long and long
+   window.navigator.vibrate([1100,750,1100,750]);
+   }
+   function Pattern_9()
+   {// long and Short
+   window.navigator.vibrate([800,400,300,400,800,400,300]);
+   }
+   function Pattern_10()
+   { //Go go power-range
+   window.navigator.vibrate([150,150,150,150,75,75,150,150,450]);
+   }
+   function Pattern_11()
+   {// heartbeat
+   window.navigator.vibrate([100,250,125,900,100,250,125,900,100,250,125,900]);
+   }
+   function Pattern_12()
+   { //decresing
+   window.navigator.vibrate([1100,210,800,210,500,210,200,110]);
+   }
+
+// Created a random funtion to randomize the above pattern
+    function Randomize_3()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,3000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,3250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,3000]
+    var pattern5=[200,100,300,275,425,100,600,100,800,3000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,3000]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,3000]
+    var pattern8=[1100,250,1100,3550]
+    var pattern9=[800,200,300,200,800,200,300,3000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,3000]
+    var pattern11=[100,250,125,900,100,250,125,3000]
+    var pattern12=[1100,210,800,210,500,210,200,3100]
+
+var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<3;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process.php', 
+           data: { random1: r1, random2: r2, random3: r3},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+
+      window.navigator.vibrate(aa);
+   }
+
+// random 4 patterns 
+// Created a random funtion to randomize the above pattern
+    function Randomize_4()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<4;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process1.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+
+      window.navigator.vibrate(aa);
+   }
+  
+  // random 5 patterns 
+// Created a random funtion to randomize the above pattern
+    function Randomize_5()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<5;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==4){
+         var r5 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process2.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4, random5: r5},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+
+      window.navigator.vibrate(aa);
+   }
+     // random 6 patterns 
+// Created a random funtion to randomize the above pattern
+function Randomize_6()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<5;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==4){
+         var r5 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==5){
+         var r6 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process3.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4, random5: r5,random6: r6},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+
+      window.navigator.vibrate(aa);
+   }
+     // random 7 patterns 
+// Created a random funtion to randomize the above pattern
+function Randomize_7()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<7;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==4){
+         var r5 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==5){
+         var r6 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==6){
+         var r7 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process4.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4, random5: r5,random6: r6,random7: r7},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+
+      window.navigator.vibrate(aa);
+   }
+     // randomize 8 patterns 
+// Created a random funtion to randomize the above pattern
+function Randomize_8()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<8;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==4){
+         var r5 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==5){
+         var r6 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==6){
+         var r7 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==7){
+         var r8 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process5.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4, random5: r5,random6: r6,random7: r7,random8: r8},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+
+      window.navigator.vibrate(aa);
+   }
+     // randomize 9 patterns 
+// Created a random funtion to randomize the above pattern
+function Randomize_9()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<9;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==4){
+         var r5 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==5){
+         var r6 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==6){
+         var r7 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==7){
+         var r8 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==8){
+         var r9 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process6.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4, random5: r5,random6: r6,random7: r7,random8: r8,random9: r9},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+     window.navigator.vibrate(aa);
+   }
+     // randomize 10 patterns 
+// Created a random funtion to randomize the above pattern
+function Randomize_10()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<10;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==4){
+         var r5 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==5){
+         var r6 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==6){
+         var r7 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==7){
+         var r8 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==8){
+         var r9 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==9){
+         var r10 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process7.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4, random5: r5,random6: r6,random7: r7,random8: r8,random9: r9,random10: r10},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+      window.navigator.vibrate(aa);
+   }
+     // random 11 patterns 
+// Created a random funtion to randomize the above pattern
+function Randomize_11()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<11;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==4){
+         var r5 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==5){
+         var r6 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==6){
+         var r7 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==7){
+         var r8 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==8){
+         var r9 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==9){
+         var r10 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==10){
+         var r11 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process8.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4, random5: r5,random6: r6,random7: r7,random8: r8,random9: r9,random10: r10, random11: r11},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+     window.navigator.vibrate(aa);
+   }
+   // random 12 patterns 
+// Created a random funtion to randomize the above pattern
+function Randomize_12()  
+   {
+    var patterns =new Array()
+    var pattern1=[300,200,300,2000]
+    var pattern2=[75,75,75,75,75,225,75,75,75,75,75,2250]
+    var pattern3=[800,300,800,3000]
+    var pattern4=[125,75,125,275,125,75,125,275,200,600]
+    var pattern5=[200,100,300,275,425,100,600,100,800,2000]
+    var pattern6=[100,80,100,80,100,80,100,80,320,160,320,160,320,1600]
+    var pattern7=[133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,20,133,2000]
+    var pattern8=[1100,250,1100,2550]
+    var pattern9=[800,200,300,200,800,200,300,2000]
+    var pattern10=[150,150,150,150,75,75,150,150,450,2000]
+    var pattern11=[100,250,125,900,100,250,125,1000]
+    var pattern12=[1100,210,800,210,500,210,200,1100]
+
+    var aa =new Array() //array with all patterns
+var patternx= new Array() //temp  pattern
+var x=0   // variable for storing the values
+for(i=0;i<12;i++){
+   var y=0 // temp variable
+      var myrandom=Math.round(Math.random()*12);
+
+      if(myrandom==1){
+      patternx=pattern1
+      }
+      if(myrandom==2){
+      patternx=pattern2
+      }
+      if(myrandom==3){
+      patternx=pattern3
+      }
+      if(myrandom==4){
+      patternx=pattern4
+      }
+      if(myrandom==5){
+      patternx=pattern5
+      }
+      if(myrandom==6){
+      patternx=pattern6
+      }
+      if(myrandom==7){
+      patternx=pattern7
+      }
+      if(myrandom==8){
+       patternx=pattern8
+      }
+      if(myrandom==9){
+      patternx=pattern9
+      }
+      if(myrandom==10){
+      patternx=pattern10
+      }
+      if(myrandom==11){
+      patternx=pattern11
+      }
+      if(myrandom==12){
+      patternx=pattern12
+      }
+     // patterns[i]= myrandom;
+
+      //create pattern 1
+      if (i==0){
+      var r1 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+     }
+
+      if (i==1){
+         var r2 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+
+      if (i==2){
+         var r3 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==3){
+         var r4 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==4){
+         var r5 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==5){
+         var r6 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==6){
+         var r7 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==7){
+         var r8 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==8){
+         var r9 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==9){
+         var r10 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==10){
+         var r11 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+      if (i==11){
+         var r12 =myrandom;
+         while(y<patternx.length){
+            aa[x]=patternx[y]
+            y++
+            x++
+         }
+      }
+    }
+
+// creating log file
+   $.ajax({  
+           type: 'POST',  
+           url: 'process9.php', 
+           data: { random1: r1, random2: r2, random3: r3, random4: r4, random5: r5,random6: r6,random7: r7,random8: r8,random9: r9,random10: r10, random11: r11,random12: r12},
+           success: function(response) {
+           // document.getElementById("demo").innerHTML = "hello";
+           $("ul").html(response);  }
+          });
+     window.navigator.vibrate(aa);
+   }
+   </script>
+</body>
+
+</html>
